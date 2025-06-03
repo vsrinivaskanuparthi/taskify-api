@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "88374fca-9876-41a3-a754-0f14444aaea9",
+		"name": "taskify-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45577980"
+	},
+	"item": [
+		{
+			"name": "get-tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Test Task from Postman\",\n        \"description\": \"Testing POST API\",\n        \"priority\": \"High\",\n        \"status\": \"Pending\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-task-by-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/tasks/683f147b76290e2b4567835b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"tasks",
+						"683f147b76290e2b4567835b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-task",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Test Task from Postman\",\n    \"description\": \"Testing POST API\",\n    \"priority\": \"Low\",\n    \"status\": \"Pending\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/tasks/683f147b76290e2b4567835b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"tasks",
+						"683f147b76290e2b4567835b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/tasks/683f147b76290e2b4567835b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"tasks",
+						"683f147b76290e2b4567835b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
